@@ -3,10 +3,18 @@
 
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 
-function enqueue_gsap_css(){
+function enqueue_script_gsap_scrollmagic(){
+	//GSAP
 	wp_enqueue_script( 'gsap-css' );
+	wp_enqueue_script( 'gsap-ease' );
+	wp_enqueue_script( 'gsap-tweenlite' );
+
+	//ScrollMagic
+	wp_enqueue_script( 'scrollmagic-main' );
+	wp_enqueue_script( 'scrollmagic-gsap' );
+	wp_enqueue_script( 'scrollmagic-debug' ); // for debug purpose, should be deleted after development
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_gsap_css');
+add_action( 'wp_enqueue_scripts', 'enqueue_script_gsap_scrollmagic');
 
 add_action('genesis_after_header','front_page_html');
 function front_page_html(){ ?>
