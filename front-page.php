@@ -2,9 +2,14 @@
 //*front-page.php
 
 remove_action( 'genesis_loop', 'genesis_do_loop' );
-genesis();
-?>
 
+function enqueue_gsap_css(){
+	wp_enqueue_script( 'gsap-css' );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_gsap_css');
+
+add_action('genesis_after_header','front_page_html');
+function front_page_html(){ ?>
 
 <style type="text/css">
 	/*Remove everything on Front Page*/
@@ -248,3 +253,5 @@ genesis();
 </div>
 
 <?php
+} // End quote of front_page_html()
+genesis();
