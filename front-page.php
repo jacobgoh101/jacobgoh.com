@@ -14,7 +14,7 @@ function enqueue_script_gsap_scrollmagic(){
 	//ScrollMagic
 	wp_enqueue_script( 'scrollmagic-main' );
 	wp_enqueue_script( 'scrollmagic-gsap' );
-	wp_enqueue_script( 'scrollmagic-debug' ); // for debug purpose, should be deleted after development
+	//wp_enqueue_script( 'scrollmagic-debug' ); // for debug purpose, should be deleted after development
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_script_gsap_scrollmagic');
 

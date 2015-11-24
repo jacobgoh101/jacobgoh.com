@@ -12,7 +12,7 @@
 
 	var scene1 = new ScrollMagic.Scene({triggerElement:'.hero-image-text'})
 	.setTween(tween1)
-	.addIndicators()
+	//.addIndicators()
 	.addTo(scrollMagicController);
 	//END hero image
 
@@ -25,7 +25,7 @@
 
 	var scene2 = new ScrollMagic.Scene({triggerElement:'.feature-box-headline'})
 	.setTween(tween2)
-	.addIndicators()
+	//.addIndicators()
 	.addTo(scrollMagicController);
 	//END feature-box 1st row
 
@@ -38,7 +38,7 @@
 
 	var scene3 = new ScrollMagic.Scene({triggerElement:'#feature-box-3',offset:100})
 	.setTween(tween3)
-	.addIndicators()
+	//.addIndicators()
 	.addTo(scrollMagicController);
 	//END feature-box 2nd row
 
@@ -50,7 +50,7 @@
 
 	var scene34 = new ScrollMagic.Scene({triggerElement:'.for-home-contact-form'})
 	.setTween(tween4)
-	.addIndicators()
+	//.addIndicators()
 	.addTo(scrollMagicController);
 	//END contact form 'talk' enlarge
 
