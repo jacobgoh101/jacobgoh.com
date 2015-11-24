@@ -30,3 +30,18 @@ add_theme_support( 'custom-background' );
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
 
+//* Enqueue Google Font Roboto
+add_action( 'wp_enqueue_scripts', 'enqueue_google_font_Roboto');
+function enqueue_google_font_Roboto() {	
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,700', array(), CHILD_THEME_VERSION );
+}
+
+//* Remove primary nav from its original position
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+
+//* Add Widget for home contact form
+genesis_register_sidebar( array(
+    'id'        => 'for-home-contact-form',
+    'name'      => 'For Home Contact Form',
+    'description'   => '',
+) );
