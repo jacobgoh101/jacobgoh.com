@@ -1,0 +1,149 @@
+
+html{
+overflow-x: hidden;
+}
+/*Remove everything on Front Page*/
+.site-header, .site-inner, .site-footer{
+display: none;
+}
+
+.nav-primary{
+background-color: transparent;
+}
+ul#menu-main{
+text-align: right;
+}
+ul#menu-main li a{
+font-family: 'Roboto', sans-serif;
+color: white;
+font-size: 130%;
+}
+@media only screen and (max-width: 960px){
+ul#menu-main{
+text-align: center;
+}
+}
+
+/*set header hero image and darken it*/
+.hero-image {
+width: 100%;
+height: 100vh;
+position: relative;
+}
+
+.hero-image::after {
+content: "";
+background-image: url('https://lh3.googleusercontent.com/2THEgoCxWUmzN4Waw8VrEkBPjDpvzz2Mg6ByLL7Cl8qpbOEjyNY=w1920-h828-no');
+background-size: cover;
+background-position: center;
+opacity: 0.3;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: absolute;
+z-index: -1;   
+}
+
+.hero-image::before {
+content: "";
+background-color: black;
+background-size: cover;
+background-position: center;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: absolute;
+z-index: -2;   
+}
+/*END set header hero image and darken it*/
+
+/*Hero image text*/
+.hero-image-text h1,.hero-image-text h2,.hero-image-text h3,.hero-image-text h4,.hero-image-text h5,.hero-image-text h6{
+color: white;
+text-align: center;
+font-family: 'Roboto', sans-serif;
+}
+
+.hero-image-text{
+width: 100%;
+color: white;
+text-align: center;
+font-family: 'Roboto', sans-serif;
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 760px) {
+.hero-image-text h1{
+font-size: 5vw;
+}
+.hero-image-text p{
+font-size: 2vw;
+}
+}
+/*END Hero image text*/
+
+/* Feature Area*/
+.feature-box{
+width:100%;
+}
+.feature-box-image, .feature-box-text{
+display: block;
+float: left;
+padding: 15px;
+}
+.feature-box-image{
+width: 30%;
+}
+.feature-box-text{
+width: 60%;
+text-align: justify;
+text-justify: inter-word;
+}
+.feature-box-text{
+color: black;
+}
+
+.feature-box-img{
+width: 100%;
+}
+.feature-box-headline{
+width: 100%;
+text-align: center;
+margin-top: 50px;
+}
+
+.feature-box-image{
+background-color: #0099CC;
+border-radius: 50%;
+margin: 10px 0;
+}
+/*END Feature Area*/
+
+/*Contact Area*/
+.for-home-contact-form{
+width: 100%;
+background-color: #E6E6E6;
+padding: 50px;
+}
+.for-home-contact-form .wrap div{
+text-align: right;
+}
+#for-home-contact-form-1{
+font-size: 7vw;
+}
+#for-home-contact-form-2{
+font-size: 12vw;
+}
+.wpcf7 p{
+text-align: left;
+}
+@media only screen and (max-width: 800px){
+.for-home-contact-form .wrap div{
+text-align: left;
+}
+}
+/*END Contact Area*/
