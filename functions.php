@@ -30,6 +30,18 @@ add_theme_support( 'custom-background' );
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
 
+//Making jQuery load from google CDN
+function modify_jquery() {
+	if (!is_admin()) {
+		// comment out the next two lines to load the local copy of jQuery
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '2.1.4');
+		wp_enqueue_script('jquery');
+	}
+}
+add_action('init', 'modify_jquery');
+
+
 //* Enqueue Google Font Roboto
 add_action( 'wp_enqueue_scripts', 'enqueue_google_font_Roboto');
 function enqueue_google_font_Roboto() {	
