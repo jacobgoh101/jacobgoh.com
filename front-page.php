@@ -267,7 +267,7 @@ function front_page_html(){
 
 function enqueue_front_page_script()
 {
-	wp_register_script( 'front-page-script', get_template_directory_uri() . '/js/front-page.js', array( 'jquery' ), null, true );
+	wp_register_script( 'front-page-script', get_stylesheet_directory_uri() . '/js/front-page.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
     wp_enqueue_script( 'front-page-script' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_front_page_script' );
