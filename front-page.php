@@ -8,6 +8,7 @@ function enqueue_script_gsap_scrollmagic(){
 	wp_enqueue_script( 'gsap-css' );
 	wp_enqueue_script( 'gsap-ease' );
 	wp_enqueue_script( 'gsap-tweenlite' );
+	wp_enqueue_script( 'gsap-timelinelite' );
 
 	//ScrollMagic
 	wp_enqueue_script( 'scrollmagic-main' );
