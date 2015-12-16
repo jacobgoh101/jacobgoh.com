@@ -1,0 +1,56 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+$phi:1.618033988749895;
+
+.single-portfolio-left{
+	@include span-columns(4);
+	a{
+		color: #333;
+		&:hover {
+			color: #0099CC;
+		}
+	}
+	a.btn {
+		-webkit-border-radius: 10;
+		-moz-border-radius: 10;
+		border-radius: 10px;
+		color: #ffffff;
+		background: #0099CC;
+		padding: 10px 20px 10px 20px;
+		text-decoration: none;
+		display: inline-block;
+		margin-top: $phi*1em;
+		&:hover {
+			background: #003399;
+			text-decoration: none;
+		}
+	}
+}
+.single-portfolio-right{
+	@include span-columns(8);
+	#screenshot{
+		width: 100%;
+		margin-bottom: $phi*1em;
+	}
+}
+
+@include media(max-width 760px) {
+	.single-portfolio-left{
+		@include span-columns(12);
+		text-align: center;
+	}
+	.single-portfolio-right{
+		@include span-columns(12);
+		#screenshot{
+			margin-top: $phi*1em;
+		}
+	}
+}
+
+.site-footer{
+	a{
+		margin: $phi*1em;
+		color: #333;
+	}
+}

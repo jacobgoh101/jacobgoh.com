@@ -73,3 +73,46 @@ function register_script_gsap_scrollmagic()
     wp_register_script( 'scrollmagic-debug', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js' );
 }
 add_action( 'wp_enqueue_scripts', 'register_script_gsap_scrollmagic' );
+
+
+//create custom post type Portfolio
+function create_post_type_Portfolio() {
+    // set up labels
+    $labels = array(
+        'name' => 'Portfolios',
+        'singular_name' => 'Portfolio',
+        'add_new' => 'Add New Portfolio',
+        'add_new_item' => 'Add New Portfolio',
+        'edit_item' => 'Edit Portfolio',
+        'new_item' => 'New Portfolio',
+        'all_items' => 'All Portfolios',
+        'view_item' => 'View Portfolio',
+        'search_items' => 'Search Portfolios',
+        'not_found' =>  'No Portfolios Found',
+        'not_found_in_trash' => 'No Portfolios found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Portfolios',
+        );
+    //register post type
+    register_post_type( 'Portfolio', array(
+        'labels' => $labels,
+        'has_archive' => false,
+        'public' => true,
+        'supports' => array( 'title', 'editor'),
+        'taxonomies' => array(  ),  
+        'exclude_from_search' => false,
+        'capability_type' => 'post',
+        'rewrite' => array( 'slug' => 'Portfolios' ),
+        )
+    );
+
+}
+add_action( 'init', 'create_post_type_Portfolio' );
+
+
+// see what template you are using at footer
+add_action( 'admin_bar_menu', 'show_template' );
+function show_template() {
+    global $template;
+    print_r( $template );
+}

@@ -10,6 +10,7 @@ module.exports = function(grunt) {
         },
         files: {
           'css/front-page.css' : 'sass/front-page.scss',
+          'css/single-portfolio.css' : 'sass/single-portfolio.scss',
           'style.css' : 'sass/style.scss'
         }
       }
@@ -26,7 +27,8 @@ module.exports = function(grunt) {
       },
       files: {
         'style.css' : 'style.css',
-        'css/front-page.css' : 'css/front-page.css'
+        'css/front-page.css' : 'css/front-page.css',
+        'css/single-portfolio.css' : 'css/single-portfolio.css'
       }
     },
     notify: {
